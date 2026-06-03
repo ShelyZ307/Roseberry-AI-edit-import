@@ -80,9 +80,8 @@ Windows:
 scripts\update_windows.bat
 ```
 
-The updater scripts point at this private repository's release manifest. Because
-the repository is private, users need GitHub access and must provide
-`GITHUB_TOKEN` or `GH_TOKEN` in their environment before running the updater.
+The updater scripts point at this public repository's release manifest and do
+not require GitHub authentication for normal use.
 
 ## GitHub Release Flow
 

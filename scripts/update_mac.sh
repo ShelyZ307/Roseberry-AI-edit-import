@@ -1,7 +1,6 @@
 #!/bin/zsh
 set -euo pipefail
 
-# TODO: Replace this placeholder with the real published manifest URL.
 MANIFEST_URL="${ROSEBERRY_AI_EDIT_IMPORT_MANIFEST_URL:-https://github.com/ShelyZ307/Roseberry-AI-edit-import/releases/latest/download/update_manifest.json}"
 APP_HOME="${ROSEBERRY_AI_EDIT_IMPORT_HOME:-$HOME/Roseberry/AI Edit Import}"
 APP_DIR="$APP_HOME/roseberry_ai_edit_import"
@@ -28,6 +27,9 @@ trap cleanup EXIT
 log "Roseberry AI Edit Import updater starting."
 log "Manifest URL: $MANIFEST_URL"
 log "App home: $APP_HOME"
+if [ -n "$TOKEN" ]; then
+  log "Optional GitHub token detected; using authenticated request headers."
+fi
 
 python3 - <<PY
 import json

@@ -1,14 +1,8 @@
 # Troubleshooting
 
-## Update Manifest Still Has Placeholder URLs
+## Update Manifest SHA Check
 
-Before publishing a new release, make sure the release-specific manifest does not contain placeholders such as:
-
-```text
-TODO_SHA256_AFTER_BUILD
-```
-
-For this `0.2.0` release, the real manifest is:
+Before publishing a new release, make sure the release-specific manifest contains the final release ZIP SHA256 values. For this `0.2.0` release, the real manifest is:
 
 ```text
 update_manifest.json
@@ -60,14 +54,8 @@ Windows:
 
 The updater creates a backup before replacing files. Use the backup folder in the install directory to roll back manually.
 
-For private GitHub repositories, users must have GitHub access and provide an auth token through one of these environment variables:
-
-```text
-GITHUB_TOKEN
-GH_TOKEN
-```
-
-Do not hardcode tokens into updater scripts or config files.
+The update manifest and release ZIPs are public. GitHub authentication is not
+required for normal updates.
 
 ## Timing Looks Wrong
 

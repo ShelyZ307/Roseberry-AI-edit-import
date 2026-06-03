@@ -39,7 +39,7 @@ This creates platform release ZIPs in `dist/`.
 3. Upload the Windows ZIP.
 4. Compute SHA256 hashes.
 5. Create a real `update_manifest.json` from `update_manifest.example.json`.
-6. Replace TODO URLs and SHA values.
+6. Confirm release URLs and SHA values in `update_manifest.json`.
 7. Upload `update_manifest.json` as a release asset.
 
 ## Migration From Current ZIP Installs
@@ -68,4 +68,3 @@ This is safer than patching the old ZIP install in place.
 - Update notification only, without auto-install.
 - Signed releases.
 - Cleaner installer.
-
