@@ -60,6 +60,15 @@ Windows:
 
 The updater creates a backup before replacing files. Use the backup folder in the install directory to roll back manually.
 
+For private GitHub repositories, users must have GitHub access and provide an auth token through one of these environment variables:
+
+```text
+GITHUB_TOKEN
+GH_TOKEN
+```
+
+Do not hardcode tokens into updater scripts or config files.
+
 ## Timing Looks Wrong
 
 Compare Gemini/JSON time to `Source Time`, not `Timeline Time`.

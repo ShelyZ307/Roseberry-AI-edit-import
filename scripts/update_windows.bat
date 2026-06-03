@@ -24,7 +24,7 @@ mkdir "%TMP_DIR%" >nul 2>nul
 echo [%DATE% %TIME%] Roseberry AI Edit Import updater starting. > "%LOG_PATH%"
 echo [%DATE% %TIME%] Manifest URL: %MANIFEST_URL% >> "%LOG_PATH%"
 
-powershell -NoProfile -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri '%MANIFEST_URL%' -OutFile '%TMP_DIR%\update_manifest.json'"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$headers=@{}; if ($env:GITHUB_TOKEN) { $headers.Authorization='Bearer ' + $env:GITHUB_TOKEN } elseif ($env:GH_TOKEN) { $headers.Authorization='Bearer ' + $env:GH_TOKEN }; Invoke-WebRequest -Uri '%MANIFEST_URL%' -Headers $headers -OutFile '%TMP_DIR%\update_manifest.json'"
 if %ERRORLEVEL% NEQ 0 (
   echo Failed to download update manifest. See %LOG_PATH%
   pause
@@ -48,7 +48,7 @@ if "%LOCAL_VERSION%"=="%LATEST_VERSION%" (
   exit /b 0
 )
 
-powershell -NoProfile -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri '%ZIP_URL%' -OutFile '%TMP_DIR%\release.zip'"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$headers=@{}; if ($env:GITHUB_TOKEN) { $headers.Authorization='Bearer ' + $env:GITHUB_TOKEN } elseif ($env:GH_TOKEN) { $headers.Authorization='Bearer ' + $env:GH_TOKEN }; Invoke-WebRequest -Uri '%ZIP_URL%' -Headers $headers -OutFile '%TMP_DIR%\release.zip'"
 if %ERRORLEVEL% NEQ 0 (
   echo Failed to download release ZIP. See %LOG_PATH%
   pause

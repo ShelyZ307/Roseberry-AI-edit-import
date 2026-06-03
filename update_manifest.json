@@ -5,10 +5,10 @@
   "private_repo_note": "This repo is private. Users must have GitHub access/authentication to download the manifest and release ZIP assets. Do not hardcode tokens in updater scripts.",
   "mac": {
     "zip_url": "https://github.com/ShelyZ307/roseberry-ai-edit-import/releases/download/v0.2.0/Roseberry_AI_Edit_Import_mac_v0.2.0.zip",
-    "sha256": "8d32185d81282c2d60bc19bd126f334e9af840d4966a6fa497b0ae6d8b878f37"
+    "sha256": "ae600a6ea1bd49281f635b7dbb91bfbe0eff1b5ada375da65347dd56848dc1e2"
   },
   "windows": {
     "zip_url": "https://github.com/ShelyZ307/roseberry-ai-edit-import/releases/download/v0.2.0/Roseberry_AI_Edit_Import_windows_v0.2.0.zip",
-    "sha256": "b48ead65f0dd77acee66b2a3a0b14394928a370e0585a65ba8a6cd67686aaef6"
+    "sha256": "671d4cbdc7641f9876707eff272a847b2a19c1ffa743c8d1897bc983f04ef65c"
   }
 }

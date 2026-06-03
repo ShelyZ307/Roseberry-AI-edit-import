@@ -10,6 +10,11 @@ CONFIG_PATH="$CONFIG_DIR/config.json"
 LOG_PATH="$HOME/Desktop/roseberry_ai_tools_update_log.txt"
 TMP_DIR="$(mktemp -d)"
 STAMP="$(date +%Y%m%d_%H%M%S)"
+TOKEN="${GITHUB_TOKEN:-${GH_TOKEN:-}}"
+AUTH_ARGS=()
+if [ -n "$TOKEN" ]; then
+  AUTH_ARGS=(-H "Authorization: Bearer $TOKEN")
+fi
 
 log() {
   echo "[$(date -Iseconds)] $*" | tee -a "$LOG_PATH"
@@ -33,7 +38,7 @@ if not config_path.exists():
     config_path.write_text(json.dumps({"app_home": "$APP_HOME"}, indent=2) + "\\n", encoding="utf-8")
 PY
 
-curl -fsSL "$MANIFEST_URL" -o "$TMP_DIR/update_manifest.json"
+curl -fsSL "${AUTH_ARGS[@]}" "$MANIFEST_URL" -o "$TMP_DIR/update_manifest.json"
 
 LATEST_VERSION="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["latest_version"])' "$TMP_DIR/update_manifest.json")"
 ZIP_URL="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["mac"]["zip_url"])' "$TMP_DIR/update_manifest.json")"
@@ -51,7 +56,7 @@ if [ "$LOCAL_VERSION" = "$LATEST_VERSION" ]; then
   exit 0
 fi
 
-curl -fsSL "$ZIP_URL" -o "$TMP_DIR/release.zip"
+curl -fsSL "${AUTH_ARGS[@]}" "$ZIP_URL" -o "$TMP_DIR/release.zip"
 ACTUAL_SHA="$(shasum -a 256 "$TMP_DIR/release.zip" | awk '{print $1}')"
 if [ "$ACTUAL_SHA" != "$EXPECTED_SHA" ]; then
   log "SHA256 mismatch. Expected $EXPECTED_SHA but got $ACTUAL_SHA"
