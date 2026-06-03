@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+._*
+*.log
+*.append_debug.txt
+*.audio_debug.txt
+edit_mapping*.json
+ai_edit_timing_report.*
+ai_edit_timing_overlay.*
+dist/
+build/
+*.zip

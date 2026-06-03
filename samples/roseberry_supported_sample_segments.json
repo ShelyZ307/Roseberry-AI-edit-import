@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "schema": "roseberry-ai-edit-segments-v1",
+    "timecode_base": "source_relative",
+    "frame_rate": "23.976",
+    "notes": "Times are source-relative from 00:00:00.000. Segment end_time is an exclusive cut boundary."
+  },
+  "segments": [
+    {
+      "index": 1,
+      "title": "Opening Hook",
+      "start_time": "00:00:00.000",
+      "end_time": "00:01:20.000",
+      "duration_sec": 80.0,
+      "hook": "A strong opening moment introduces the main conflict.",
+      "start_reason": "The segment starts at the beginning of the source.",
+      "end_reason": "The segment ends on a question that motivates the next segment."
+    },
+    {
+      "index": 2,
+      "title": "Rising Pressure",
+      "start_time": "00:01:20.000",
+      "end_time": "00:02:45.500",
+      "duration_sec": 85.5,
+      "hook": "The stakes become clearer as the central problem escalates.",
+      "start_reason": "The segment begins when the next major beat starts.",
+      "end_reason": "The segment ends on a reveal that creates momentum."
+    },
+    {
+      "index": 3,
+      "title": "Cliffhanger Turn",
+      "start_time": "00:02:45.500",
+      "end_time": "00:04:10.000",
+      "duration_sec": 84.5,
+      "hook": "A final turn leaves the audience wanting the next episode.",
+      "start_reason": "The segment begins immediately after the reveal.",
+      "end_reason": "The segment ends on a clean cliffhanger boundary."
+    }
+  ]
+}

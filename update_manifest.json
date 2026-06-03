@@ -1,0 +1,14 @@
+{
+  "latest_version": "0.2.0",
+  "minimum_launcher_version": "0.1.0",
+  "release_notes_url": "https://github.com/ShelyZ307/roseberry-ai-edit-import/releases/tag/v0.2.0",
+  "private_repo_note": "This repo is private. Users must have GitHub access/authentication to download the manifest and release ZIP assets. Do not hardcode tokens in updater scripts.",
+  "mac": {
+    "zip_url": "https://github.com/ShelyZ307/roseberry-ai-edit-import/releases/download/v0.2.0/Roseberry_AI_Edit_Import_mac_v0.2.0.zip",
+    "sha256": "8d32185d81282c2d60bc19bd126f334e9af840d4966a6fa497b0ae6d8b878f37"
+  },
+  "windows": {
+    "zip_url": "https://github.com/ShelyZ307/roseberry-ai-edit-import/releases/download/v0.2.0/Roseberry_AI_Edit_Import_windows_v0.2.0.zip",
+    "sha256": "b48ead65f0dd77acee66b2a3a0b14394928a370e0585a65ba8a6cd67686aaef6"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "latest_version": "0.2.0",
+  "minimum_launcher_version": "0.1.0",
+  "release_notes_url": "https://github.com/ShelyZ307/roseberry-ai-edit-import/releases/tag/v0.2.0",
+  "mac": {
+    "zip_url": "https://github.com/ShelyZ307/roseberry-ai-edit-import/releases/download/v0.2.0/Roseberry_AI_Edit_Import_mac_v0.2.0.zip",
+    "sha256": "TODO_SHA256_AFTER_BUILD"
+  },
+  "windows": {
+    "zip_url": "https://github.com/ShelyZ307/roseberry-ai-edit-import/releases/download/v0.2.0/Roseberry_AI_Edit_Import_windows_v0.2.0.zip",
+    "sha256": "TODO_SHA256_AFTER_BUILD"
+  }
+}
