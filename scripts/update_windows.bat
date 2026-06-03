@@ -3,7 +3,7 @@ setlocal EnableExtensions EnableDelayedExpansion
 
 REM TODO: Replace this placeholder with the real published manifest URL.
 if "%ROSEBERRY_AI_EDIT_IMPORT_MANIFEST_URL%"=="" (
-  set "MANIFEST_URL=https://github.com/ShelyZ307/roseberry-ai-edit-import/releases/latest/download/update_manifest.json"
+  set "MANIFEST_URL=https://github.com/ShelyZ307/Roseberry-AI-edit-import/releases/latest/download/update_manifest.json"
 ) else (
   set "MANIFEST_URL=%ROSEBERRY_AI_EDIT_IMPORT_MANIFEST_URL%"
 )

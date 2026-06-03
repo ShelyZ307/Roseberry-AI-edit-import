@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # TODO: Replace this placeholder with the real published manifest URL.
-MANIFEST_URL="${ROSEBERRY_AI_EDIT_IMPORT_MANIFEST_URL:-https://github.com/ShelyZ307/roseberry-ai-edit-import/releases/latest/download/update_manifest.json}"
+MANIFEST_URL="${ROSEBERRY_AI_EDIT_IMPORT_MANIFEST_URL:-https://github.com/ShelyZ307/Roseberry-AI-edit-import/releases/latest/download/update_manifest.json}"
 APP_HOME="${ROSEBERRY_AI_EDIT_IMPORT_HOME:-$HOME/Roseberry/AI Edit Import}"
 APP_DIR="$APP_HOME/roseberry_ai_edit_import"
 CONFIG_DIR="$HOME/Library/Application Support/Roseberry AI Tools"
