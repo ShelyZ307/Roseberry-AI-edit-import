@@ -80,11 +80,9 @@ Windows:
 scripts\update_windows.bat
 ```
 
-Before publishing, edit the TODO GitHub URLs inside:
-
-- `update_manifest.example.json`
-- `scripts/update_mac.sh`
-- `scripts/update_windows.bat`
+The updater scripts point at this private repository's release manifest. Because
+the repository is private, users need GitHub access and must provide
+`GITHUB_TOKEN` or `GH_TOKEN` in their environment before running the updater.
 
 ## GitHub Release Flow
 
@@ -96,4 +94,3 @@ Before publishing, edit the TODO GitHub URLs inside:
 6. Publish/update `update_manifest.json`.
 
 See `docs/Troubleshooting.md` and the installation docs for more detail.
-
